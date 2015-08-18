@@ -1,0 +1,38 @@
+{
+  "name": "esnext-sandbox",
+  "version": "0.0.1",
+  "description": "ESNext experiments using Babel",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ameyms/esnext-sandbox.git"
+  },
+  "keywords": [
+    "Babel",
+    "ESNext",
+    "ES2015"
+  ],
+  "author": "Amey Sakhadeo <me@ameyms.com>",
+  "license": "The Unlicense",
+  "bugs": {
+    "url": "https://github.com/ameyms/esnext-sandbox/issues"
+  },
+  "homepage": "https://github.com/ameyms/esnext-sandbox",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.22",
+    "babel-eslint": "^4.0.10",
+    "chai": "^3.2.0",
+    "eslint": "^1.1.0",
+    "eslint-plugin-babel": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-mocha": "^2.1.3",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4"
+  }
+}
