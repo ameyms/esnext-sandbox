@@ -10,6 +10,7 @@
     "rules": {
         "no-mixed-requires": [0, false],
         "strict": [1, "never"],
+        "no-undef": 2,
         "curly": 1,
         "no-bitwise": 1,
         "max-len": [1, 110, 4],
@@ -85,6 +86,11 @@
     ],
 
     "globals": {
-        "require": true
+        "require": true,
+        "describe": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "it": true,
+        "expect": true
     }
 }
