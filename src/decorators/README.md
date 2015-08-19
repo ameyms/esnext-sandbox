@@ -30,8 +30,8 @@ fido.legs // 4
 ## 2. Property decorators
 #### Recipes
 
-* Altering the property descriptor <small>\[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/property-decorators.js#L3) | [Tests](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/property-decorators-test.js#L17-L19) \]</small>
-* Automatically catching & logging errors <small>\[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/property-decorators.js#L6) | [Tests](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/property-decorators-test.js#L27-L49) \]</small>
+* Altering the property descriptor <small>\[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/prop-decorators.js#L3) | [Tests](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/prop-decorators-test.js#L17-L19) \]</small>
+* Automatically catching & logging errors <small>\[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/prop-decorators.js#L6) | [Tests](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/prop-decorators-test.js#L27-L49) \]</small>
 
 #### Quick example
 ```js
