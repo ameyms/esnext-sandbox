@@ -5,9 +5,10 @@
 ## 1. Class decorators
 #### Recipes
 
-* [Keeping track of the classes they were applied on](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/class-decorators.js#L16)
-* [Adding a predefined set of properties and methods to class](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/class-decorators.js#L17-L23)
-* [Dynamically generating properties or methods for a class](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/class-decorators.js#L24)
+* Keeping track of the classes they were applied <small>[
+ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/class-decorators.js#L16) | [Test](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/class-decorators-test.js#L41-L54) ]</small>
+* Adding a predefined set of properties and methods to class <small>[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/class-decorators.js#L17-L23) | [Test](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/class-decorators-test#L26-L39) ]</small>
+* Dynamically generating properties or methods for a class <small>[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/class-decorators.js#L24) | [Test](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/class-decorators-test#L57-L85) ]</small>
 
 #### Quick example
 ```js
@@ -29,8 +30,8 @@ fido.legs // 4
 ## 2. Property decorators
 #### Recipes
 
-* [Altering the property descriptor](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/property-decorators.js#L3)
-* [Automatically catching & logging errors](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/property-decorators.js#L6)
+* Altering the property descriptor <small>\[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/property-decorators.js#L3) | [Tests](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/property-decorators-test.js#L17-L19) \]</small>
+* Automatically catching & logging errors <small>\[ [Source](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/property-decorators.js#L6) | [Tests](https://github.com/ameyms/esnext-sandbox/blob/master/src/decorators/__tests__/property-decorators-test.js#L27-L49) \]</small>
 
 #### Quick example
 ```js

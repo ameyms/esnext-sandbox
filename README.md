@@ -8,9 +8,9 @@ ESNext Sandbox
 A showcase of cool EcmaScript features and how you can use them (tests included!)
 
 ## Table of Contents
-#### 1. [Decorators](https://github.com/ameyms/esnext-sandbox/tree/master/src/decorators#Decorators)
- - [Class Decorators](https://github.com/ameyms/esnext-sandbox/tree/master/src/decorators#class-decorators)
- - [Property Decorators](https://github.com/ameyms/esnext-sandbox/tree/master/src/decorators#property-decorators)
+#### 1. [Decorators](https://github.com/ameyms/esnext-sandbox/tree/master/src/decorators#decorators)
+ - [Class Decorators](https://github.com/ameyms/esnext-sandbox/tree/master/src/decorators#1-class-decorators)
+ - [Property Decorators](https://github.com/ameyms/esnext-sandbox/tree/master/src/decorators#2-property-decorators)
 
 
 ## Further Reading
