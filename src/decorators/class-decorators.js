@@ -22,11 +22,15 @@ export class Animal {
 
 })
 @HasLegs(4)
+@Domestic
 export class Dog extends Animal {
     get sound() {
         return String.raw`Woof Woof!`;
     }
 }
+
+
+export class Labrador extends Dog {}
 
 function Colloquial(...commonNames) {
 
@@ -35,6 +39,14 @@ function Colloquial(...commonNames) {
             __commonNameMap[c] = target;
         }
     };
+}
+
+function Domestic(Klass) {
+    Object.defineProperty(Klass, 'isDomestic', {
+        configurable: false,
+        writable: false,
+        value: true
+    });
 }
 
 function HasLegs(numLegs) {
