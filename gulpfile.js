@@ -3,18 +3,19 @@ var gulp = require('gulp'),
     mocha = require('gulp-mocha'),
     babel = require('babel/register');
 
-global.expect = require('chai').expect;
-global.sinon = require('sinon');
-
 gulp.task('lint', function() {
-    return gulp.src(['src/**/*.js'])
+    return gulp.src(['src/{,*/}{,__tests__/}*.js'])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failOnError());
 });
 
-gulp.task('test', function() {
-    return gulp.src(['src/{,*/}__tests__/*.js'])
+gulp.task('test', ['lint'], function() {
+
+    global.expect = require('chai').expect;
+    global.sinon = require('sinon');
+
+    return gulp.src(['src/{,*/}__tests__/*-test.js'])
             .pipe(mocha({
                 compilers: {
                     js: babel
@@ -24,6 +25,4 @@ gulp.task('test', function() {
             }));
 });
 
-gulp.task('default', function() {
-
-});
+gulp.task('default', ['lint', 'test']);
