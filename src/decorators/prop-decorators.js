@@ -4,7 +4,7 @@ export default {
     answer: 42,
 
     @logOnError('Oops! It failed')
-    compute(wrongInput=true) {
+    compute(wrongInput = true) {
         if (wrongInput) {
             throw new Error('');
         }
