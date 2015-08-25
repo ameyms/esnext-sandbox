@@ -1,6 +1,13 @@
 export const NEW_FRUIT_MSG = 'Juicer got a new fruit!';
 export const FRUIT_CONSUMED_MSG = 'Fruit pulped. Closing lid.';
 
+var i = 0,
+    names = ['Alice', 'Bob', 'Charlie', 'Dan'];
+
+function namerFn() {
+    return names[i++];
+};
+
 class ConveyerBelt {
 
     constructor() {
@@ -8,30 +15,39 @@ class ConveyerBelt {
         this.__fruitName = null;
     }
 
-    target(Klass) {
-        let that = this;
-        let constructorFn = Klass.prototype.constructor;
+    target(nameFn) {
+        var that = this;
 
-        Object.defineProperties(Klass.prototype, {
+        return function(Klass) {
+            let constructorFn = Klass.prototype.constructor;
 
-            constructor: {
-                value() {
-                    console.log('Inside modified constructor');
-                    let instance = constructorFn.apply(this, arguments);
-                    that.__juicer = instance;
-                    return instance;
+            class ModifiedClass extends Klass {
+                constructor() {
+                    super();
+                    Object.defineProperty(this, 'name', {
+
+                        get() {
+                            return nameFn();
+                        }
+                    });
+
+                    that.__juicer = this;
                 }
-            },
+            };
 
-            currentFruit: {
-                enumerable: true,
-                configurable: false,
-                get() {
+            Object.defineProperties(ModifiedClass.prototype, {
+                currentFruit: {
+                    enumerable: true,
+                    configurable: false,
+                    get() {
 
-                    return that.__fruitMap[that.__fruitName];
+                        return that.__fruitMap[that.__fruitName];
+                    }
                 }
-            }
-        });
+            });
+
+            return ModifiedClass;
+        };
     }
 
     pile(pileName) {
@@ -85,7 +101,7 @@ class Watermelon extends Fruit {
     }
 }
 
-@fastBelt.target
+@fastBelt.target(namerFn)
 export class Juicer {
 
     @fastBelt.beforeDrop

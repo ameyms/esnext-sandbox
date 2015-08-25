@@ -51,4 +51,17 @@ describe('Methods as decorators', () => {
 
         afterEach(() => 42);
     });
+
+    describe('Drop targets', () => {
+        var j1, j2;
+
+        beforeEach(() => {
+            j1 = new Juicer();
+            j2 = new Juicer();
+        });
+
+        it('should have different names', () => {
+            expect(j1.name).to.not.be.equal(j2.name);
+        });
+    });
 });
